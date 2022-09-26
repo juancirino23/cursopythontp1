@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+*{
+    margin: 0%; 
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Noto Sans', sans-serif;
+    background-color: whitesmoke;
+    min-height: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+     min-height: 100vh  
+ }
+
+.gridcontainer{
+    display: grid;
+    grid-template-areas:  "header header header header"
+                            "main main main main"
+                            "main main main main"
+                            "main main main main"
+                            "footer footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-gap: 10px;
+}
+header{
+    grid-area: header;
+    padding-bottom:10px;
+}
+main{
+    grid-area:main;
+    padding:15px;
+}
+footer{
+    grid-area:footer;
+}
+.homearticle{
+  display:flex;
+  justify-content: center;
+  animation: fadeIn 5s;
+}
+.articulo1{
+/* width:55%; */
+width:100%;
+font-size:1.0em;
+}
+.imagenarticulo{
+  float:right;
+  padding-top:45px;
+  width:400px;
+  height:300px;
+/*   animation: fadeIn 5s;
+ */  /* height: 100px; */
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+@media only screen and (max-width:1024px){
+  header{
+    grid-row:1/2;
+    grid-column:1/5;
+}
+}
